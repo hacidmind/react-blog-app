@@ -4,11 +4,13 @@ import useCustomHook from '../useCustomHook';
 
 const Blogpage = () => {
     const { id } = useParams();
-    const { data: vehicle, isLoading, isError } = useCustomHook(`http://localhost:8000/blogs/${id}`);
+    // const { data: vehicle, isLoading, isError } = useCustomHook(`http://localhost:8000/blogs/${id}`);
+    const { data: vehicle, isLoading, isError } = useCustomHook(`https://my-json-server.typicode.com/hacidmind/cardb/blogs/${id}`);
 
     const navigate = useNavigate()
     const handleDelete = () => {
-        fetch(`http://localhost:8000/blogs/${id}`,
+        // fetch(`http://localhost:8000/blogs/${id}`,
+        fetch(`https://my-json-server.typicode.com/hacidmind/cardb/blogs/${id}`,
             {
             method: "DELETE"
             }).then(() => {

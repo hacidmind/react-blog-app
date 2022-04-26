@@ -18,7 +18,8 @@ const Newblog = () => {
         setIsLoading(true)
     
 
-        fetch('http://localhost:8000/blogs', {
+        // fetch('http://localhost:8000/blogs', {
+        fetch("https://my-json-server.typicode.com/hacidmind/cardb/blogs", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(blog)
